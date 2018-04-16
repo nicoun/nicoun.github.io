@@ -1,0 +1,4 @@
+<?php 
+	
+	echo 'one Page';
+ ?>

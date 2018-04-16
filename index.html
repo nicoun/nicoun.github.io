@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='App'>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./toggle.css">
+</head>
+<body>
+	<div class="container">
+			
+		<div class="nav change_L" ng-controller='navCtrl'>
+			<ul>
+				<li  ng-repeat='nav in navs'>
+					<a href="{{nav.link}}">{{nav.text}}</a>
+				</li>
+			</ul>
+		</div>
+		<div class="main">
+			<div class="header">
+				<button class="switch">点击切换</button>	
+			</div>
+			<div class="contain">
+				<div class="mask"></div>
+				<div ng-view></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="./lib/jquery-2.1.0.js"></script>
+<script src="./lib/angular.min.js"></script>
+<script src="./lib/angular-route.min.js"></script>
+<script src="./scripts/toggle.js"></script>
+<script src="./scripts/app.js"></script>
+<script src="./scripts/controllers.js"></script>
